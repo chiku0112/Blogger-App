@@ -1,0 +1,22 @@
+
+<div class="login-card">
+    <div class="login-card-inner">
+        Welcome to Blogger
+        <%= image_tag('blog2.png') %>
+         
+        <ul id = "articles">
+            <% @articles.each do |article| %>
+                <li>
+                    <%= link_to article.title, article_path(article) %>
+                </li>
+            <% end %>
+
+        </ul>
+      
+
+        <h3> 
+            <%= link_to "Create A new Article! ", new_article_path,
+            class: "new_article" %>
+        </h3>
+    </div>
+</div>
