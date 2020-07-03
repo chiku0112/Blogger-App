@@ -35,3 +35,6 @@ I have some awesome commands for you. Just close your eyes and in the app direct
 
 .....aaaannnnddd boom! No errors now.
 Thank me later!
+
+
+The front end part has not been done till now, so it will be better to stay tuned!
