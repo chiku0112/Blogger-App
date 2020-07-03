@@ -1,0 +1,18 @@
+<div class="login-card">
+    <div class="login-card-inner">
+        Tags
+        <%= image_tag('blog2.png') %>
+         
+        <ul>
+            <% @tags.each do |tag| %>
+                <li>
+                    <%=  link_to tag.name %>
+                </li>
+            <% end %>
+
+        </ul>
+      
+
+        
+    </div>
+</div>
