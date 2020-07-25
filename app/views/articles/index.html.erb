@@ -1,9 +1,20 @@
+<link rel="stylesheet" 
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+crossorigin="anonymous">
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@700&display=swap');
+</style>
+
+<!--
 <div class="login-card">
     <div class="login-card-inner">
         Welcome to Blogger
         <%= image_tag('blog2.png') %>
-         
+        
         <ul id = "articles">
             <% @articles.each do |article| %>
                 <li>
@@ -15,8 +26,62 @@
       
 
         <h3> 
+        <button class="btn btn-default ">
             <%= link_to "Create A new Article! ", new_article_path,
             class: "new_article" %>
+        </button>
         </h3>
     </div>
 </div>
+-->
+
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card text-center shadow p-3 mb-5 bg-white rounded" style="height: 40rem; width:30rem; margin-left: 25rem;">
+      <div class="card-body">
+      <br>
+        <h1 class="card-title title1-color">VIEW ARTICLES</h1>
+        <br><br>
+        <p class="card-text">You can go through all the articles here. 
+        Feel free to drop some love in the comments section :)</p>
+        <br>
+        <!-- img class="card-img-bottom" src="assets/5300c6.png" style="width:100%; height:31%;" / -->
+        <div class="imgcontainer">
+      
+        
+          <img class="card-img-bottom image" src="assets/blue.jpg" style="width:100%; height:43%;" />
+          <div class="middle">
+            <div class="text">
+            </div>
+          </div>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card text-center shadow p-3 mb-5 bg-white rounded" style="height: 40rem; width:30rem; margin-right: 25rem;">
+      <div class="card-body">
+      <br>
+        <h1 class="card-title title2-color">CREATE ARTICLE</h1>
+        <br><br>
+        <p class="card-text">Have something ready in your mind? Share it with us :) Pour your heart out! </p>
+        <br> 
+        <!-- img class="card-img-bottom" src="assets/FFBA37.jpeg" style="width:100%;height:31% " / -->
+        <div class="imgcontainer">
+        <%= link_to new_article_path do %>
+          <img class="card-img-bottom image" src="assets/abv_yellow.png" style="width:100%; height:41%;" />
+          <div class="middle">
+            <div class="text"></div>
+          </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

@@ -1,3 +1,88 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trocchi&display=swap');
+</style>
+
+<body>
+    <div class="top-bar">
+        <div class="top-bar-title">
+            <%= @article.title %>
+            <br>
+            <hr style="width:50%;text-align:center;">
+        </div>
+    </div>
+    <div class="container">
+        <div class="article-body">
+            <p>
+                <%= @article.body %>
+            <p>
+            <br><br>
+            <p>
+            Tags:
+                <% @article.tags.each do |tag| %>
+                    <%= link_to tag.name, tag_path(tag) %>
+                <% end %>
+            </p>
+            <hr style="width:100%;text-align:center; color:black">
+            <br>
+                <%= link_to "DELETE", article_path(@article) , method: :DELETE, 
+                    data: {confirm: "Really delete the article? Think twice nigger :)"} , class: "button1-class" %>
+                <%= button_to "EDIT", edit_article_path(@article), :method => "get", class: "button2-class" %>
+                <%= button_to "BACK", articles_path, :method => "get", class: "button3-class" %>
+            <br><br>
+            <div class="comment-box">
+                <h3>Comments (<%= @article.comments.size %>)</h3>
+                <%= render partial: 'articles/comment', collection: @article.comments %>
+                    <hr style="width:100%;text-align:center; color:black">
+                <%= render partial: 'comments/form' %>
+            </div> <br><br>
+            <hr style="width:100%;text-align:center; color:black">
+        </div>
+    </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <div class="login-card">
     <div class="login-card-inner">
         <%= @article.title %>
@@ -24,3 +109,4 @@
 
     </div>
 </div>
+-->

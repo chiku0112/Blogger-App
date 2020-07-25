@@ -1,0 +1,9 @@
+<div>hello</div>
+<ul id = "articles">
+            <% @articles.each do |article| %>
+                <li>
+                    <%= link_to article.title, article_path(article) %>
+                </li>
+            <% end %>
+
+        </ul>
